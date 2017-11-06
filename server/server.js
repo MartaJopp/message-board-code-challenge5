@@ -1,4 +1,4 @@
-var express = require ('express');
+var express = require('express');
 var app = express();
 var port = 5000;
 var bodyParser = require('body-Parser');
@@ -22,6 +22,6 @@ mongoose.connection.on('error', function () {
 });
 mongoose.connect(databaseUrl);
 
-app.listen(port, function(){
+app.listen(port, function () {
     console.log('listening', port);
 });

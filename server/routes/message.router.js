@@ -1,4 +1,4 @@
-var express = require ('express');
+var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose');
@@ -23,7 +23,7 @@ router.post('/', function (req, res) {
 }); // END POST Route
 
 router.get('/', function (req, res) {
-    Message.find({}, function (err, messagesFound) { 
+    Message.find({}, function (err, messagesFound) {
         if (err) {
             console.log("ERROR!", err);
             res.sendStatus(500);

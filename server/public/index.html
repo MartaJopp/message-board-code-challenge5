@@ -15,10 +15,11 @@
 
 <body ng-app="myApp">
     <div class="container" ng-controller="MessageBoardController as mc">
-        <h1>Message Board</h1>
-
-        <h3>Add a Message:</h3>
+        <header>
+            <h1>Message Board</h1>
+        </header>
         <div class="content">
+            <h3>Add a Message:</h3>
             <form ng-submit="mc.submitMessage(mc.message)">
                 <label for="user">Username: </label>
                 <input type="text" placeholder="Username" ng-model="mc.message.username" id="user">

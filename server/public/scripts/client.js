@@ -8,9 +8,9 @@ myApp.controller('MessageBoardController', function ($http) {
     };
 
     vm.messages = []
-    
+
     vm.getMessages = function () {
-        $http.get('/messages').then(function (response){
+        $http.get('/messages').then(function (response) {
             vm.messages = response.data;
         });
     }
