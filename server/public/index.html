@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,46 @@
     <script src="vendors/angular.js"></script>
     <script src="vendors/angular-route.js"></script>
     <script src="scripts/client.js"></script>
-    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css"/>
-    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/style.css" />
 </head>
-<body ng-app="myApp">
-    <div class = "container" ng-controller = "MessageBoardController as mc">
-<h1>Message Board</h1>
 
-<h3>Add a Message:</h3>
-<div class = "content">
-<form ng-submit = "mc.submitMessage(mc.message)">
-<label for="user">Username: </label>
-<input type = "text" placeholder = "Username" ng-model="mc.message.username" id = "user">
-<label for="write">Message: </label>
-<input type="text" placeholder="Write your message here" ng-model="mc.message.write" id="write">
-<button class="btn btn-primary">Primary</button>
-</form> <!--end submit message form-->
-</div> <!--end content div class-->
-    </div> <!--end container div that has controller-->
+<body ng-app="myApp">
+    <div class="container" ng-controller="MessageBoardController as mc">
+        <h1>Message Board</h1>
+
+        <h3>Add a Message:</h3>
+        <div class="content">
+            <form ng-submit="mc.submitMessage(mc.message)">
+                <label for="user">Username: </label>
+                <input type="text" placeholder="Username" ng-model="mc.message.username" id="user">
+                <label for="write">Message: </label>
+                <input type="text" placeholder="Write your message here" ng-model="mc.message.write" id="write">
+                <button class="btn btn-primary">Submit</button>
+            </form>
+            <!--end submit message form-->
+        </div>
+        <!--end content div class-->
+        <div class="container">
+            <div class="row">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tr ng-repeat="message in mc.messages">
+                        <td>{{message.username}}</td>
+                        <td>{{message.write}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+    <!--end container div that has controller-->
 </body>
+
 </html>

@@ -16,6 +16,6 @@ This application is a simple message board which allows users to input their use
 - [x] Basic file and folder setup
 - [x] Basic html setup
 - [x] Server setup
-- [] Mongo setup
-- [] POST route to submit messages
-- [] GET route to retrieve messages
+- [x] Mongo setup
+- [x] POST route to submit messages
+- [x] GET route to retrieve messages
